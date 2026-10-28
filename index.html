@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Pengunjung</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo 2:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Registrasi Taman Bermain</h1>
+        <p class="deskripsi">
+            Masukkan nama dan usia Anda untuk memeriksa izin masuk.
+        </p>
+
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama"
+                       placeholder="Masukkan nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="usia">Usia</label>
+                <input type="number" id="usia"
+                       placeholder="Masukkan usia"
+                       min="1" max="120" step="1" required>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" id="btnProses">
+                    PROSES
+                </button>
+
+                <button type="button" id="btnClear">
+                    CLEAR
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Dialog hasil -->
+    <div id="overlay" class="overlay">
+        <div class="dialog">
+            <button type="button" id="btnTutup"
+                    class="btn-tutup" aria-label="Tutup">&times;</button>
+
+            <div id="ikonHasil" class="ikon-hasil">✓</div>
+            <h2 id="judulHasil">Hasil Registrasi</h2>
+            <p id="pesanHasil"></p>
+
+            <button type="button" id="btnOK" class="btn-ok">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <!-- jQuery harus dipanggil sebelum script.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
